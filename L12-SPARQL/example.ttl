@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/> .
+
+
+:#green-goblin
+  rel:enemyOf :#spiderman ;
+  rdf:type foaf:Person ;    
+  foaf:name "Green Goblin" ;
+  foaf:knows :#harry-osborn ;
+  dc:description "A supervillain who uses advanced technology and equipment" .
+
+:#spiderman
+  rel:enemyOf :#green-goblin ;
+  a foaf:Person ;
+  foaf:name "Spiderman";
+  rel:friendOf :#mary-jane ;
+  dc:creator "Stan Lee" ;
+  owl:sameAs :#peter-parker .
+
+:#peter-parker
+  a foaf:Person ;
+  foaf:name "Peter Parker" ;
+  rel:worksFor :#daily-bugle ;
+  foaf:knows :#aunt-may ;
+  foaf:interest "Photography", "Science" ;
+  owl:sameAs :#spiderman .
+
+:#mary-jane
+  a foaf:Person ;
+  foaf:name "Mary Jane Watson" ;
+  rel:friendOf :#spiderman, :#peter-parker ;
+  foaf:knows :#harry-osborn .
+
+:#harry-osborn
+  a foaf:Person ;
+  foaf:name "Harry Osborn" ;
+  rel:childOf :#green-goblin ;
+  rel:friendOf :#spiderman, :#peter-parker .
+
+:#daily-bugle
+  a foaf:Organization ;
+  foaf:name "The Daily Bugle" ;
+  dc:description "A newspaper in New York City" .
+
+:#aunt-may
+  a foaf:Person ;
+  foaf:name "May Parker" ;
+  rel:auntOf :#peter-parker .
