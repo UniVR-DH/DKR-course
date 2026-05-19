@@ -1,0 +1,12 @@
+caller_service,target_service,authorization_scope
+api-gateway,auth-service,read-write
+api-gateway,payment-svc,read-write
+api-gateway,order-svc,read-write
+api-gateway,log-aggregator,read-only
+auth-service,customer-db,read-write
+auth-service,cache-service,read-write
+payment-svc,customer-db,read-write
+payment-svc,log-aggregator,read-only
+order-svc,customer-db,read-only
+order-svc,log-aggregator,read-only
+log-aggregator,customer-db,read-only

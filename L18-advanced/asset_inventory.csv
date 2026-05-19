@@ -1,0 +1,11 @@
+instance_id,assigned_private_ip,service_name,software_component,software_version,network_zone,subnet_cidr
+i-api-1001,10.0.1.11,api-gateway,nginx,1.23.1,DMZ_Edge,10.0.1.0/24
+i-api-1002,10.0.1.12,api-gateway,nginx,1.23.1,DMZ_Edge,10.0.1.0/24
+i-auth-2001,10.0.2.11,auth-service,spring-boot,2.7.3,Internal_Core,10.0.2.0/24
+i-auth-2002,10.0.2.12,auth-service,spring-boot,2.7.3,Internal_Core,10.0.2.0/24
+i-pay-3001,10.0.3.11,payment-svc,spring-boot,3.1.0,Internal_Core,10.0.3.0/24
+i-ord-3002,10.0.3.12,order-svc,spring-boot,3.0.1,Internal_Core,10.0.3.0/24
+i-cdb-4001,10.0.4.11,customer-db,postgresql,14.5,Data_Vault,10.0.4.0/24
+i-cdb-4002,10.0.4.12,customer-db,postgresql,14.5,Data_Vault,10.0.4.0/24
+i-log-5001,10.0.5.11,log-aggregator,elasticsearch,8.6.1,Internal_Core,10.0.5.0/24
+i-cache-5002,10.0.5.12,cache-service,redis,7.0.5,Internal_Core,10.0.5.0/24

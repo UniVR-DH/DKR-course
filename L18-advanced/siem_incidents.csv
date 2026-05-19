@@ -1,0 +1,11 @@
+incident_id,alert_timestamp,target_instance_id,triggering_log_id,exploited_component,targeted_endpoint,incident_type,severity,cve_id,mitigation_action
+INC-2026-002,2026-05-18T08:15:15.250,i-auth-2001,log-0404,spring-boot,/auth/token,Remote_Code_Execution,MEDIUM,CVE-2022-22965,None
+INC-2026-003,2026-05-18T08:23:48.899,i-pay-3001,log-0405,spring-boot,/pay/charge,Credential_Dump,LOW,NONE,None
+INC-2026-004,2026-05-18T09:36:01.849,i-ord-3002,log-0406,spring-boot,/orders/create,Anomalous_Internal_Portscan,LOW,NONE,None
+INC-2026-001,2026-05-18T09:51:42.359,i-api-1001,log-0403,nginx,/api/v1/login,Credential_Dump,LOW,NONE,None
+INC-2026-005,2026-05-18T09:54:52.258,i-api-1001,log-0413,nginx,/api/v1/admin/upload,Remote_Code_Execution,CRITICAL,CVE-2021-44228,Host_Isolated
+INC-2026-006,2026-05-18T09:58:52.340,i-api-1002,log-0414,nginx,/api/v1/admin/upload,Remote_Code_Execution,CRITICAL,CVE-2021-44228,Host_Isolated
+INC-2026-007,2026-05-18T10:00:52.706,i-auth-2001,log-0415,spring-boot,/auth/internal/dump,Anomalous_Internal_Portscan,HIGH,NONE,Traffic_Blocked
+INC-2026-008,2026-05-18T10:02:52.984,i-cdb-4001,log-0416,postgresql,SELECT * FROM users WHERE active=1,Credential_Dump,CRITICAL,NONE,Host_Isolated
+INC-2026-009,2026-05-18T10:04:52.229,i-cdb-4002,log-0417,postgresql,"SELECT card_number, cvv FROM payment_methods",Credential_Dump,HIGH,NONE,Traffic_Blocked
+INC-2026-010,2026-05-18T10:07:52.504,i-cache-5002,log-0418,redis,SET session_token_override admin_priv,Credential_Dump,HIGH,NONE,Traffic_Blocked
